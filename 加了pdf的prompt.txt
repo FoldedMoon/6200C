@@ -1,0 +1,50 @@
+$jl-cross-audit
+
+Conduct a complete, evidence-grounded AI system-change audit of the CEO Brief uploaded in THIS Codex App conversation, using the JL Insurance Cross-Audit Harness in the current local project.
+
+This is an AUDIT RUN, not a request to modify, rebuild, or test the harness. Follow the current AGENTS.md, .agents/skills/jl-cross-audit/SKILL.md, CROSS_AUDIT_WORKFLOW.md and audit_report_template.md. Read jl_insurance_background.md as the fixed company background.
+
+EXECUTION AND SANDBOX NETWORK AUTHORIZATION — THIS AUDIT ONLY
+- I explicitly authorize Codex to execute the project-root `.\run_bridge.cmd` file, which invokes the bundled `runtime\python.exe` and existing `tools\consult_models.py`. This is the approved bridge entry point; do not use system Python, `.venv`, or install dependencies.
+- I explicitly authorize outbound HTTPS requests for independent external review to BOTH configured LLM API services: Qwen (`https://maas.qianwenaiapi.com`) and DeepSeek (`https://api.deepseek.com`). This authorization covers only the faithfully extracted, fictional/sanitized current CEO Brief and official JL Insurance background, supplied in the bridge's JSON packet. It does not authorize sending other files, prior chat content, Codex findings, or API keys.
+- I use Codex's **Ask for approval** permission level. Attempt this authorized bridge execution within the available sandbox permissions. If sandbox networking or CMD execution requires elevated permission, request approval for that specific operation using Codex's normal approval mechanism, and proceed only when granted. The wording of this prompt does not override sandbox restrictions. Do not change global permissions, select Full Access, or bypass denied approvals.
+- If the actual CEO Brief contains real confidential or personal data, or its disclosure status is unclear, request specific authorization before transmitting it externally, despite the standing approval for fictional/sanitized cases.
+
+1. INTAKE AND SOURCE INTEGRITY
+- Identify the current uploaded CEO Brief and any explicitly supplied attachments. Do not use briefs from older conversations or prior audits.
+- Read the entire accessible document, regardless of whether it is TXT, DOCX, text-based PDF or scanned PDF/image. Extract text and check critical details, including negations, dates, numbers, tables and page order. Use OCR/visual examination only when needed and available. Do not pretend inaccessible or unreadable content was read.
+- Preserve the exact material wording and distinguish source IDs: BG-01 for the fixed JL Insurance background; CEO-01 (and CEO-02 etc. if needed) for the current uploaded evidence. Record source/page/section locators and any extraction limitations.
+- Keep the original CEO Brief outside the permanent project knowledge base. Do not create a cases/ directory.
+
+2. CODEX INDEPENDENT FIRST PASS — BEFORE ANY EXTERNAL OPINIONS
+- Compare the proposed change with JL's baseline staff-facing AI pilot: who uses it, autonomy, customer impact, data, integration, source documents, oversight and proposed safeguards.
+- Independently identify case-specific risks, relevant existing or planned controls, information gaps, counter-evidence and proportionate recommendations. Also recognize safeguards that may meaningfully reduce risk.
+- Record a clear provisional findings list BEFORE calling Qwen or DeepSeek. Do not show that list to the external reviewers.
+
+3. BLIND QWEN AND DEEPSEEK REVIEWS
+- Package only the complete, faithfully extracted current CEO Brief and the official JL Insurance background into the bridge's expected JSON source packet. Use their exact readable text, not your paraphrased summary or preliminary conclusions.
+- Consult Qwen and DeepSeek independently through the existing `tools/consult_models.py` bridge using the project-root `run_bridge.cmd` launcher (bundled `runtime\python.exe`). Pass the validated JSON packet via standard input; do not use system Python or `.venv`. Use the API configuration already present on this computer. Never print or transmit API keys to the chat.
+- Do not pass the Codex initial audit, prior session materials, unrelated local files or conversation history to these models.
+- Apply the explicit execution, sandbox-network, data-transfer and approval boundaries stated at the beginning of this prompt.
+- Do not simulate external responses. Record each provider's actual status, model, number of findings, errors and validation warnings. If a provider fails, clearly mark the audit as a reduced-scope review.
+
+4. EVIDENCE-BASED CROSS-AUDIT
+- Compare the independently generated Codex, Qwen and DeepSeek findings; merge overlaps but examine unique/minority findings rather than dismissing them.
+- For each material issue, confirm that the cited exact wording exists in the relevant primary source AND actually supports the factual claim. External model views are advisory analysis, not independent evidence.
+- Distinguish known/stated facts, proposed measures, implemented-but-unverified controls, verified controls, plausible risks and unknowns. "Not mentioned" does not mean "not done"; "planned" does not mean "implemented"; and a control's existence does not prove its effectiveness.
+- Reassess likelihood, impact, customer exposure, risk priority, control mitigation and recommendation proportionality. Challenge both exaggerated risks and unsupported reassurance. Do not decide by model voting.
+- Document material disagreements and whether each was accepted, qualified, rejected or remains unresolved, with a concise evidence-grounded reason.
+
+5. FINAL DELIVERABLE
+- Produce the complete audit report IN THIS CONVERSATION using audit_report_template.md: executive summary, change overview, prioritized findings, control assessment, missing evidence, practical recommendations, human-review decisions, limitations, source list and cross-model reconciliation.
+- Add an execution-verification section stating the actual document coverage, whether Codex assessed independently first, each external provider's actual status and finding count, major disagreements and remaining limitations.
+- State the status accurately: label a practice run "SIMULATION / PRACTICE AUDIT"; use "ORIGINAL LIVE AUDIT REPORT" only if the user explicitly identifies the official Week 7 live assessment. Do not falsely present a simulated brief as an official live exam brief.
+- The final conclusion is decision support for human internal audit, not certified assurance, a legal opinion or management approval.
+
+6. OPERATING CONSTRAINTS
+- Do not modify AGENTS.md, skills, workflows, templates, model settings, API keys or tools. Do not run unrelated tests or install dependencies unless essential and specifically approved.
+- Do not use external web research as source evidence for JL-specific facts or fabricate regulatory citations.
+- Do not create persistent case directories or silently overwrite prior reports. Do not persist the uploaded CEO Brief into the fixed knowledge base.
+- If document extraction, permissions, networking or the bridge fails, disclose the exact limitation. Never claim a complete cross-model review unless both independent provider responses were actually received.
+
+Proceed with this audit using the CEO Brief attached in the current conversation.
